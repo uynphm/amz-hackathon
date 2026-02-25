@@ -1,1 +1,1 @@
-# gitlab-hackathon
+# amz-hackathon
