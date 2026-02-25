@@ -1,0 +1,49 @@
+"use client"
+
+import { cn } from "@/lib/utils"
+
+export type AIState = "IDLE" | "LISTENING" | "THINKING" | "SELECTING SEAT"
+
+interface StatusBannerProps {
+  state: AIState
+}
+
+const stateConfig: Record<AIState, { label: string; className: string }> = {
+  IDLE: {
+    label: "READY",
+    className: "bg-secondary text-foreground border-border",
+  },
+  LISTENING: {
+    label: "LISTENING",
+    className: "bg-primary text-primary-foreground border-primary",
+  },
+  THINKING: {
+    label: "THINKING",
+    className: "bg-secondary text-foreground border-foreground",
+  },
+  "SELECTING SEAT": {
+    label: "SELECTING SEAT",
+    className: "bg-primary text-primary-foreground border-primary",
+  },
+}
+
+export function StatusBanner({ state }: StatusBannerProps) {
+  const config = stateConfig[state]
+
+  return (
+    <div
+      role="status"
+      aria-live="assertive"
+      aria-atomic="true"
+      className={cn(
+        "flex items-center justify-center rounded-lg border-2 px-4 py-3 transition-colors duration-300",
+        config.className
+      )}
+    >
+      <span className="text-lg font-bold tracking-widest">{config.label}</span>
+      <span className="sr-only">
+        {`Current status: ${config.label}`}
+      </span>
+    </div>
+  )
+}
