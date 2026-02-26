@@ -1,0 +1,37 @@
+# Dependencies
+node_modules/
+.pnp
+.pnp.js
+
+# Testing
+coverage/
+
+# Production / Build
+dist/
+build/
+.next/
+out/
+
+# Environment Secrets
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+*.pem
+
+# System Files
+.DS_Store
+Thumbs.db
+*.log
+
+# IDE Settings
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Project Specific
+extension/dist/
+extension/node_modules/
+backend/node_modules/

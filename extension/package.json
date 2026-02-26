@@ -1,0 +1,32 @@
+{
+    "name": "skyvoice-extension",
+    "version": "1.0.0",
+    "private": true,
+    "type": "module",
+    "scripts": {
+        "dev": "vite",
+        "build": "tsc --noEmit && vite build",
+        "postbuild": "cp manifest.json dist/manifest.json && mkdir -p dist/icons && cp public/icons/*.png dist/icons/",
+        "preview": "vite preview"
+    },
+    "dependencies": {
+        "class-variance-authority": "^0.7.1",
+        "clsx": "^2.1.1",
+        "framer-motion": "^11.18.0",
+        "lucide-react": "^0.564.0",
+        "react": "^19.0.0",
+        "react-dom": "^19.0.0",
+        "tailwind-merge": "^3.5.0"
+    },
+    "devDependencies": {
+        "@tailwindcss/vite": "^4.2.0",
+        "@types/node": "^25.3.1",
+        "@types/react": "^19.0.0",
+        "@types/react-dom": "^19.0.0",
+        "@vitejs/plugin-react": "^4.3.4",
+        "tailwindcss": "^4.2.0",
+        "tw-animate-css": "^1.3.3",
+        "typescript": "^5.7.3",
+        "vite": "^6.2.0"
+    }
+}
