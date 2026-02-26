@@ -44,3 +44,22 @@ Whenever you make changes to the extension source code:
 2. **Refresh in Chrome**:
    - Go to `chrome://extensions/`
    - Click the **Refresh** (circular arrow) icon on the SkyVoice extension card.
+
+### Backend Setup
+
+1. Navigate to the `backend` directory:
+   ```bash
+   cd backend
+   ```
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+3. Build the backend:
+   ```bash
+   npm run build
+   ```
+4. Deploy to AWS Lambda:
+   ```bash
+   npx serverless deploy
+   ```
