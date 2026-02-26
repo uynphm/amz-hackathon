@@ -35,3 +35,4 @@ Thumbs.db
 extension/dist/
 extension/node_modules/
 backend/node_modules/
+backend/dist/
