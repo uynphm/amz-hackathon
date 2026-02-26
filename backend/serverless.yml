@@ -1,0 +1,24 @@
+service: skyvoice-backend
+
+provider:
+  name: aws
+  runtime: nodejs20.x
+  region: us-east-1
+  stage: dev
+  httpApi:
+    cors: true
+
+functions:
+  processVoice:
+    handler: dist/handler.handler
+    events:
+      - httpApi:
+          path: /process
+          method: POST
+
+package:
+  individually: true
+  patterns:
+    - "!node_modules/**"
+    - "!src/**"
+    - "dist/handler.cjs"
