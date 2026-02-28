@@ -6,7 +6,7 @@
     "scripts": {
         "dev": "vite",
         "build": "tsc --noEmit && vite build",
-        "postbuild": "cp manifest.json dist/manifest.json && mkdir -p dist/icons && cp public/icons/*.png dist/icons/",
+        "postbuild": "shx cp manifest.json dist/manifest.json && shx mkdir -p dist/icons && shx cp public/icons/*.png dist/icons/",
         "preview": "vite preview"
     },
     "dependencies": {
@@ -24,6 +24,7 @@
         "@types/react": "^19.0.0",
         "@types/react-dom": "^19.0.0",
         "@vitejs/plugin-react": "^4.3.4",
+        "shx": "^0.4.0",
         "tailwindcss": "^4.2.0",
         "tw-animate-css": "^1.3.3",
         "typescript": "^5.7.3",

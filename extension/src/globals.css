@@ -62,8 +62,5 @@
     body {
         @apply bg-background text-foreground;
         font-family: 'Inter', system-ui, sans-serif;
-        /* Fixed width for the extension popup */
-        width: 400px;
-        min-height: 100px;
     }
 }
