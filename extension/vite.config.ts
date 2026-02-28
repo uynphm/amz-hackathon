@@ -11,6 +11,7 @@ export default defineConfig({
         rollupOptions: {
             input: {
                 popup: fileURLToPath(new URL('./index.html', import.meta.url)),
+                'seat-demo': fileURLToPath(new URL('./seat-demo.html', import.meta.url)),
             },
             output: {
                 // Avoid __ prefixed chunk names that Chrome rejects
