@@ -13,7 +13,10 @@
     "author": "",
     "license": "ISC",
     "dependencies": {
-        "lucide-react": "^0.475.0"
+        "@aws-sdk/client-bedrock-runtime": "^3.1000.0",
+        "@smithy/node-http-handler": "^4.4.12",
+        "@smithy/types": "^4.13.0",
+        "rxjs": "^7.8.2"
     },
     "devDependencies": {
         "@types/aws-lambda": "^8.10.147",
